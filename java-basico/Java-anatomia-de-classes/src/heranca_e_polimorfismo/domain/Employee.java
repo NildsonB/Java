@@ -1,16 +1,27 @@
-package heranca_e_polimorfismo;
+package heranca_e_polimorfismo.domain;
 
 public sealed abstract class Employee permits Manager, Salesman {
 
-    private String code;
+    public Employee(String code, String name, String address, int age, double salary) {
+        this.code = code;
+        this.name = name;
+        this.address = address;
+        this.age = age;
+        this.salary = salary;
+    }
 
-    private String name;
+    public Employee() {
+    }
 
-    private String address;
+    protected String code;
 
-    private int age;
+    protected String name;
 
-    private double salary;
+    protected String address;
+
+    protected int age;
+
+    protected double salary;
 
     public String getCode() {
         return code;
@@ -50,5 +61,11 @@ public sealed abstract class Employee permits Manager, Salesman {
 
     public void setSalary(double salary) {
         this.salary = salary;
+    }
+
+    public abstract double getFullSalary();
+
+    public double getFullSalary(double extra){
+        return this.getFullSalary() + extra;
     }
 }

@@ -1,7 +1,8 @@
 package heranca_e_polimorfismo;
 
-import javax.swing.text.StyleContext;
-import java.sql.SQLOutput;
+import heranca_e_polimorfismo.domain.Employee;
+import heranca_e_polimorfismo.domain.Manager;
+import heranca_e_polimorfismo.domain.Salesman;
 
 public class Main {
     public static void main(String[] args) {
@@ -36,14 +37,18 @@ public class Main {
                 salesman.setName("Lucas");
                 salesman.setSalary(2800);
                 salesman.setPercetPerSold(10);
+                salesman.setSoldAmount(1000);
 
 
                 System.out.println(salesman.getCode());
                 System.out.println(salesman.getName());
                 System.out.println(salesman.getSalary());
                 System.out.println(salesman.getPercetPerSold());
+                System.out.println(salesman.getSoldAmount());
             }
         }
+        System.out.println(employee.getFullSalary());
+        System.out.println(employee.getFullSalary(500));
         System.out.println("==================");
     }
 }
