@@ -8,6 +8,7 @@ public non-sealed class TicketFamily extends Ticket {
     Ticket selection (Ticket ticket) {
         this.NameofMovie = ticket.getNameofMovie();
         this.LegOrDub = ticket.getNameofMovie();
+        this.value = ticket.getValue();
         if (numberOfPeople < 4) {
             this.value = (ticket.getValue() * getNumberOfPeople());
         } else {
