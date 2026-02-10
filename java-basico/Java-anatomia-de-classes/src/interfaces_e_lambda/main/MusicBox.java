@@ -1,4 +1,4 @@
-package interfaces_e_lambda;
+package interfaces_e_lambda.main;
 
 public class MusicBox implements MusicPlayer{
     @Override
