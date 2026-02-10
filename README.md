@@ -10,7 +10,7 @@
 ### Programação orientada a Objetos
 > - [x] Abstração com Classes
 > - [x] Encapsulamento
-> - [ ] Herança
-> - [ ] Polimorfismo
-> - [ ] Interfaces
+> - [x] Herança
+> - [x] Polimorfismo
+> - [x] Interfaces
 > - [ ] Lambda
