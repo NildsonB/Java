@@ -2,7 +2,7 @@ package estrutuda_de_dados.filas;
 
 public class Main {
     public static void main(String[] args) {
-        Fila fila = new Fila();
+        Fila<String> fila = new Fila<>();
 
 //        No noUm = new No("primeiro");
 //        No noDois = new No("segundo");

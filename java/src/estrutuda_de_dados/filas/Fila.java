@@ -1,26 +1,22 @@
 package estrutuda_de_dados.filas;
 
-public class Fila {
+public class Fila<T> {
 
-    private No refEntrada;
+    private No<T> refEntrada;
 
     public Fila() {
         this.refEntrada = null;
     }
 
-    public Fila(No refEntrada) {
-        enqueue(refEntrada);
-    }
-
-    public void enqueue(Object objeto){
-        No novoNo = new No(objeto);
+    public void enqueue(T objeto){
+        No<T> novoNo = new No<T>(objeto);
         novoNo.setRefNo(refEntrada);
         refEntrada = novoNo;
     }
 
-    public Object dequeue(){
-        No primeiroNo = refEntrada;
-        No segundoNo = refEntrada;
+    public T dequeue(){
+        No<T> primeiroNo = refEntrada;
+        No<T> segundoNo = refEntrada;
         if(!this.isEmpty()){
             while(true){
                 if (primeiroNo.getRefNo() != null) {
@@ -32,12 +28,12 @@ public class Fila {
                 }
             }
         }
-        return primeiroNo.getObject();
+        return (T) primeiroNo.getObject();
     }
 
-    public Object first(){
+    public T first(){
         if(!this.isEmpty()) {
-            No primeiroNo = refEntrada;
+            No<T> primeiroNo = refEntrada;
             while (true) {
                 if (primeiroNo.getRefNo() != null) {
                     primeiroNo = primeiroNo.getRefNo();
@@ -45,7 +41,7 @@ public class Fila {
                     break;
                 }
             }
-            return primeiroNo.getObject();
+            return (T) primeiroNo.getObject();
         }
         return null;
     }
@@ -57,7 +53,7 @@ public class Fila {
     @Override
     public String toString() {
         String stringRetorno = "";
-        No noAuxiliar = refEntrada;
+        No<T> noAuxiliar = refEntrada;
 
         if(refEntrada != null){
             while(true){
