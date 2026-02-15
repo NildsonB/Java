@@ -4,14 +4,15 @@ public class Main {
     public static void main(String[] args) {
         Fila fila = new Fila();
 
-        No noUm = new No("primeiro");
-        No noDois = new No("segundo");
-        No noTres = new No("terceiro");
-        No noQuatro = new No("quarto");
+//        No noUm = new No("primeiro");
+//        No noDois = new No("segundo");
+//        No noTres = new No("terceiro");
+//        No noQuatro = new No("quarto");
 
-        fila.enqueue(noUm);
-        fila.enqueue(noDois);
-        fila.enqueue(noTres);
+        fila.enqueue("noUm");
+        fila.enqueue("noDois");
+        fila.enqueue("noTres");
+
 
         System.out.println("Fila: " + fila);
 
@@ -21,7 +22,7 @@ public class Main {
 
         System.out.println(fila.first());
 
-        fila.enqueue(noQuatro);
+        fila.enqueue("noQuatro");
 
         System.out.println("Fila: " + fila);
     }
