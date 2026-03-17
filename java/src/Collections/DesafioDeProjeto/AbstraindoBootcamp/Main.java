@@ -10,11 +10,11 @@ public class Main {
      Curso curso1 = new Curso();
      Curso curso2 = new Curso();
 
-     curso1.setNome("Java");
+     curso1.setTitulo("Java");
      curso1.setDescricao("Curos de Java");
      curso1.setCargaHoraria(10);
 
-     curso2.setNome("PHP");
+     curso2.setTitulo("PHP");
      curso2.setDescricao("Curos de PHP");
      curso2.setCargaHoraria(7);
 
